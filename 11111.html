@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>冯静妃个人主页</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+/*设置超链接样式*/
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	color: #5086a5;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+a:hover {
+	color: #5086a5;
+	text-decoration: underline;
+	font-size: 12px;
+}
+
+a:visited {
+	color: #5086a5;
+	font-size: 12px;
+}
+/*整个tab层居中，宽度为600px*/
+#tabDiv {
+	width: 600px;
+	margin: 1em auto;
+	padding-bottom: 10px;
+	border-right: #b2c9d3 1px solid;
+	border-top: #b2c9d3 1px solid;
+	border-left: #b2c9d3 1px solid;
+	border-bottom: #b2c9d3 1px solid;
+	background: #ffffff;
+}
+/*tab头的样式*/
+#tabsHead {
+	padding-left: 0px;
+	height: 26px;
+	background-color: #e8f7fc;
+	font-size: 1em;
+	margin: 1px 0px 0px;
+	color: #5086a5;
+	line-height: 26px;
+}
+/*已选tab头（超链接）的样式*/
+.curtab {
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	border-right: #b2c9d3 1px solid;
+	font-weight: bold;
+	float: left;
+	cursor: pointer;
+	background: #ffffff;
+}
+/*未选tab头（超链接）的样式*/
+.tabs {
+	border-right: #c1d8e0 1px solid;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	font-weight: normal;
+	float: left;
+	cursor: pointer;
+}
+p {
+	font-size: 12pt;
+	text-indent: 2em;
+}
+li {
+  	border-bottom-style: solid;
+  	border-bottom-color: #EEE;
+  	border-bottom-width: thin;
+  	height: 25px;
+	font-family: "宋体";
+	font-size: 12pt;
+}
+</style>
+
+<script type="text/jscript">	
+        //显示tab（tabHeadId：tab头中当前的超链接；tabContentId要显示的层ID）
+        function showTab(tabHeadId,tabContentId) 
+        {
+            //tab层
+            var tabDiv = document.getElementById("tabDiv");
+            //将tab层中所有的内容层设为不可见
+            //遍历tab层下的所有子节点
+            var taContents = tabDiv.childNodes;
+            for(i=0; i<taContents.length; i++) 
+            {
+                //将所有内容层都设为不可见
+                if(taContents[i].id!=null && taContents[i].id != 'tabsHead')
+                {
+                    taContents[i].style.display = 'none';
+                }
+            }
+            //将要显示的层设为可见
+            document.getElementById(tabContentId).style.display = 'block';          
+            //遍历tab头中所有的超链接
+            var tabHeads = document.getElementById('tabsHead').getElementsByTagName('a');
+            for(i=0; i<tabHeads.length; i++) 
+            { 
+                //将超链接的样式设为未选的tab头样式
+                tabHeads[i].className='tabs'; 
+            }
+            //将当前超链接的样式设为已选tab头样式
+            document.getElementById(tabHeadId).className='curtab';
+            document.getElementById(tabHeadId).blur();
+        }
+</script>
+</head>
+
+<body>
+	<div style="width: 100%; font-family: 微软雅黑; text-align: center; font-size: 20pt;">冯静妃个人主页</div>
+
+	<div id="tabDiv" style="width: 1000px">
+
+		<div id="tabsHead">
+			<a id="tabs1" class="curtab" href="javascript:showTab('tabs1','tabContent1')">基本资料</a> <a id="tabs2" class="tabs" href="javascript:showTab('tabs2','tabContent2')">获奖记录</a>
+		</div>
+
+		<div id="tabContent1" style="display: block">
+			<table style="border-width: 0; width: 100%">
+				<tr>
+					<td rowspan="3" style="width: 300px; text-align: center"><img alt="冯静妃" src="img/2.jpg" style="width: 280px" /></td>
+					<td colspan="3" rowspan="3">
+						<table border="1" style="border-left-color: aqua; border-bottom-color: aqua; width: 701px; border-top-style: solid; border-top-color: aqua; border-right-style: solid; border-left-style: solid; height: 380px; border-right-color: aqua; border-bottom-style: solid">
+							<tr>
+								<td style="width: 50%">姓名：冯静妃</td>
+								<td style="width: 50%">生日：2000.04.07</td>
+							</tr>
+							<tr>
+								<td style="width: 50%">国籍：中华人民共和国</td>
+								<td style="width: 50%">出生地：河北邯郸</td>
+							</tr>
+							<tr>
+								<td style="width: 50%; height: 29px">身高：未知</td>
+								<td style="width: 50%; height: 29px">体重：未知</td>
+							</tr>
+							<tr>
+								<td style="width: 50%">血型：O</td>
+								<td style="width: 50%">星座：白羊座</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<p>冯静妃，2000年4月7日出生于河北省邯郸市，2018年至今，就读于石家庄铁道大学信息科学与技术学院软件工程系。</p>
+									<p>2005年，开始进入幼儿园学习，以及愉快的玩耍，每天在路上会买一块钱的糖，在教室开开心心坐小板凳在第一排。</p>
+									<p>2007年，成为一名戴红领巾的小学生，有了第一辆自行车，每天骑车上学，家里的大黄狗会在路上陪我跑到学校。</p>
+									<p>2012年，成为一名初中住宿生，一周才能回家一次，虽然是有点想家的，但是没有掉眼泪，和宿舍小伙伴玩的很开心。</p>
+									<p>2015年，顺利从初中毕业，并顺利进入高中，成为一名早起晚睡的高中生，每天虽然很累但是很充实，晚修结束回宿舍的路上最开心。</p>
+									<p>2018年，终于，六月高考之后，顺利从高中毕业，不再是一名高中生，仔细研究招生手册之后，报志愿进入石家庄铁道大学信息科学与技术学院计算机系。</p>
+									<p>2019年，在计算机系学习知识时间满一年之后，专业分流选择了软件工程，彻彻底底成为了一名敲代码的女大学生，眼镜再也摘不下去了，真开心。</p>
+									<p>2020年，选了课web应用开发技术，在听课八周之后开始做实验，这是实验一的内容：冯静妃的自我介绍。</p>
+									<p>老师很温柔，声音很好听，虽然在凑字，但是是实话</p>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+				</tr>
+				<tr>
+				</tr>
+			</table>
+		</div>
+		<!--以下为获奖记录部分内容-->
+		<div id="tabContent2" style="display: none">
+			<ul>
+				<li>2009-01-11：‘三好学生’奖（吃好睡好锻炼好）</li>
+				<li>2012-6-20：优秀学生会干部！！</li>
+				<li>2015-5-18：成安二中优秀毕业生</li>
+				<li>2015-7-04：优秀班干部！！</li>
+				<li>2018-6-01：成安一中优秀毕业生</li>
+				<li>2018-9-17：成功评选组织委员</li>
+				<li>2019-1-02：评选班级团支书成功</li>
+				<li>2019-03-01：书法比赛二等奖</li>
+				<li>2019-09-22：院级优秀团员</li>
+				<li>2019-12-26：班级二等奖学金</li>
+				<li>2020-02-10：防疫志愿者</li>
+			</ul>
+		</div>
+	</div>
+	<hr />
+	<div style="text-align: center; width: 100%; font-size: 12px; color: #333;">&copy;版权所有：石家庄铁道大学信息科学与技术学院</div>
+</body>
+</html>
